@@ -1,7 +1,4 @@
-# cisDynet
-An integrated platform for modeling gene-regulatory dynamics and networks
-# cis-regulatory chromatin dynamics and networks (cisDynet)
-
+![image](https://github.com/tzhu-bio/cisDynet/blob/main/png/cisDynet.png)
 
 [![Build Status](https://travis-ci.org/username/MyPackage.svg?branch=master)](https://travis-ci.org/tzhu-bio/CAT)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/MyPackage)](https://cran.r-project.org/package=CAT)
@@ -10,7 +7,9 @@ An integrated platform for modeling gene-regulatory dynamics and networks
 <img alt="Published" src="https://img.shields.io/badge/Published%3F-yes-green.svg?color=FF9900" target="_blank" /> </a>
 [![Last-changedate](https://img.shields.io/badge/last%20change-2023--08--27-green.svg)](https://github.com/tzhu-bio/cisDynet/commits/master)
 
-![image](https://github.com/tzhu-bio/cisDynet/blob/main/png/cisDynet.png)
+An integrated platform for modeling gene-regulatory dynamics and networks.
+# cis-regulatory chromatin dynamics and networks (cisDynet)
+
 
 <div align="center">
     <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Roboto+Slab&color=%237E3ACE&size=30&center=true&vCenter=true&width=750&lines=cis-regulatory chromatin dynamics and networks" alt="Computer Engineering Student, Brazilian front-end developer, Power Metal lover"></a>
