@@ -19,14 +19,14 @@ An integrated platform for modeling gene-regulatory dynamics and networks
 ## Comparisons
 ![image](https://github.com/tzhu-bio/cisDynet/blob/main/png/comparsion.png)
 ## Workflow
-![image](https://github.com/tzhu-bio/CAT/blob/main/png/workflow2.png)
+![image](https://github.com/tzhu-bio/cisDynet/blob/main/png/workflow.png)
 ## Installation
 ``` r
 if (!requireNamespace("devtools", quietly = TRUE))
 install.packages("devtools")
 ```
 ``` r
-devtools::install_github("tzhu-bio/CAT")
+devtools::install_github("tzhu-bio/cisDynet")
 ```
 ## Full Manual
 See [Full Manual]( https://tzhu-bio.github.io/CAT_bookdown/) to get the tutorial.
