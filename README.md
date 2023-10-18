@@ -17,7 +17,7 @@ An integrated platform for modeling gene-regulatory dynamics and networks
 </div>
 
 ## Comparisons
-![image](https://github.com/tzhu-bio/CAT/blob/main/png/cat_compare.png)
+![image](https://github.com/tzhu-bio/cisDynet/blob/main/png/comparsion.png)
 ## Workflow
 ![image](https://github.com/tzhu-bio/CAT/blob/main/png/workflow2.png)
 ## Installation
