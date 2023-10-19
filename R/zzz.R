@@ -18,6 +18,5 @@
   message(logo_info)
   crayon::blue(cat("Author: Tao Zhu\n"))
   crayon::blue(cat(sprintf("cisDynet: Version %s\n",packageVersion("CAT"))))
-  #message("For more information see our website : www.ArchRProject.com")
-  crayon::blue(cat("If you encounter a bug please report : https://github.com/tzhu-bio/CAT/issues\n"))
+  crayon::blue(cat("If you encounter a bug please report : https://github.com/tzhu-bio/cisDynet/issues\n"))
 }
