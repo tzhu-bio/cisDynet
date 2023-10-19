@@ -1,0 +1,64 @@
+Package: cisDynet
+Type: Package
+Title: An integrated package for modeling gene-regulatory dynamics and networks.
+Version: 1.0.0
+Authors@R: person("Tao", "Zhu", , "tzhubio@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-9667-498X"))
+BugReports: https://github.com/tzhu-bio/cisDynet/issues
+Depends:
+    R (>= 4.3.0)
+Description: This package is designed to do advanced ATAC-seq analyses in R.
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+biocViews:
+    AnnotationDbi,
+    ChIPseeker,
+    clusterProfiler,
+    ComplexHeatmap,
+    DESeq2,
+    EnrichedHeatmap,
+    enrichplot,
+    GenomicFeatures,
+    GenomicRanges,
+    IRanges,
+    org.Hs.eg.db,
+    preprocessCore,
+    rtracklayer,
+    SummarizedExperiment,
+    TFBSTools
+Imports: 
+    aplot,
+    assertthat,
+    BSDA,
+    corrplot,
+    cowplot,
+    data.table,
+    dendextend,
+    dplyr,
+    ggfortify,
+    ggplot2,
+    ggpubr,
+    ggrepel,
+    ggridges,
+    ggtern,
+    glasso,
+    gtools,
+    igraph,
+    matrixStats,
+    paletteer,
+    parallel,
+    pheatmap,
+    philentropy,
+    plyr,
+    progress,
+    rdist,
+    reshape2,
+    rlist,
+    stats,
+    tidyr,
+    tools,
+    UpSetR,
+    valr,
+    venn
