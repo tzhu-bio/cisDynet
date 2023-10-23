@@ -74,6 +74,7 @@ getCount <- function(sample_list, cut_path, peak_path, peak_suffix="_peaks_uniqu
   colnames(all_cov) <- sample_list
   all_cov[is.na(all_cov)] <- 0
   rownames(all_cov) <- sprintf("%s:%s-%s",merged_peaks$chrom, merged_peaks$start,merged_peaks$end)
+  all_cov <- all_cov[rowSums(all_cov) !=0, ]
   if(!is.na(save_file_path)){
     write.table(all_cov, file=sprintf("%s/ATAC_Counts_Data.tsv",save_file_path), sep='\t',quote=F,col.names=T,row.names=T)
   }
