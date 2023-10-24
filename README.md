@@ -28,7 +28,7 @@ install.packages("devtools")
 devtools::install_github("tzhu-bio/cisDynet")
 ```
 ## Full Manual
-See [Full Manual]( https://tzhu-bio.github.io/CAT_bookdown/) to get the tutorial.
+See [Full Manual](https://tzhu-bio.github.io/cisDynet_bookdown/) to get the tutorial.
 
 ## Publication
 TODO
