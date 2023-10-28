@@ -26,6 +26,7 @@ quantification <- function(sample_list, cut_path, peak_path, peak_suffix="_peaks
   coverage <- lapply(sample_list, function(x) {
     cut <- valr::read_bed(sprintf("%s/%s_q30_cut_sites.bed",cut_path,x))
     colnames(cut)[4] <- "name"
+    cut$name <- as.numeric(cut$name)
     res <- valr::bed_map(merged_peaks,cut,sum=sum(name))[4]
     return(res)
   })
