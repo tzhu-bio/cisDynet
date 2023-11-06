@@ -31,7 +31,7 @@ devtools::install_github("tzhu-bio/cisDynet")
 See [Full Manual](https://tzhu-bio.github.io/cisDynet_bookdown/) to get the tutorial.
 
 ## Publication
-TODO
+[iMeta](https://onlinelibrary.wiley.com/journal/2770596x) (accepted)
 
 <a href="mailto:tzhubio@gmail.com">
   <img src="https://github.com/blackcater/blackcater/raw/main/images/social-gmail.svg" height="40" />
