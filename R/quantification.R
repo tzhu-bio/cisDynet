@@ -69,7 +69,10 @@ getCount <- function(sample_list, cut_path, peak_path, peak_suffix="_peaks_uniqu
   merged_peaks <- valr::bed_merge(all_peaks)
   coverage <- lapply(sample_list, function(x) {
     cut <- valr::read_bed(sprintf("%s/%s_q30_cut_sites.bed",cut_path,x))
-    res <- valr::bed_map(merged_peaks,cut,sum=sum(X4))[4]
+    colnames(cut)[4] <- "name"
+    cut$name <- as.numeric(cut$name)
+    res <- valr::bed_map(merged_peaks,cut,sum=sum(name))[4]
+    #res <- valr::bed_map(merged_peaks,cut,sum=sum(X4))[4]
     return(res)
   })
   all_cov <- rlist::list.cbind(coverage)
