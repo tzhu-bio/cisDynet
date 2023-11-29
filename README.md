@@ -31,7 +31,7 @@ devtools::install_github("tzhu-bio/cisDynet")
 See [Full Manual](https://tzhu-bio.github.io/cisDynet_bookdown/) to get the tutorial.
 
 ## Publication
-[iMeta](https://onlinelibrary.wiley.com/journal/2770596x) (accepted)
+Zhu, Tao, Zhou, Xinkai, You, Yuxin, Wang, Lin, He, Zhaohui, and Chen, Dijun. 2023. “ cisDynet: An Integrated Platform for Modeling Gene-Regulatory Dynamics and Networks.” iMeta e152. https://doi.org/10.1002/imt2.152
 
 <a href="mailto:tzhubio@gmail.com">
   <img src="https://github.com/blackcater/blackcater/raw/main/images/social-gmail.svg" height="40" />
