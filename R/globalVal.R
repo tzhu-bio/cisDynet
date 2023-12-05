@@ -10,7 +10,8 @@
 #'
 #' @examples   addAnnotation(gene_bed="./gene.bed", gtf="hg19.gtf", genome_size="hg19.chrom.size")
 addAnnotation <- function(gene_bed, gtf, genome_size) {
-  gene <- valr::read_bed(gene_bed, n_fields = 6)
+  # gene <- valr::read_bed(gene_bed, n_fields = 6)
+  gene <- valr::read_bed(gene_bed)  ## valr 0.7.0 update
   tss <- gene
   tss$start <- ifelse(tss$strand=="+", tss$start, tss$end)
   tss$end <- ifelse(tss$strand=="+", tss$start + 1, tss$end+1)
