@@ -92,7 +92,9 @@ compareFootprints <- function(samples, motif, smooth_window=5, flanking_length=2
   cal_footprint <- function(gene_bed, coverage_bed, group_name) {
     logfile("Reading footprint...")
     #gene <- genomation::readBed(gene_bed)
-    gene <- valr::read_bed(gene_bed, n_fields = 6)
+    #gene <- valr::read_bed(gene_bed, n_fields = 6)
+    gene <- read.table(gene_bed)[,c(1:6)]
+    colnames(gene) <- c("Chr","Start","End","Motif","Score","Strand")
     gene <- GenomicRanges::makeGRangesFromDataFrame(gene, keep.extra.columns=T)
     logfile("Reading bigwig...")
     coverage <- loadFullBigWig(coverage_bed)
