@@ -9,7 +9,7 @@
 
 An integrated platform for modeling gene-regulatory dynamics and networks.
 # News
-**2023-12-05**: To match the valr version 0.7.0.
+**Changelog** - **2023-12-05**: To match the valr version 0.7.0.
 
 If you encounter a bug, please install the latest version of cisDynet first.
 
