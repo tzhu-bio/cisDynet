@@ -1,4 +1,4 @@
-.onLoad <- function(CAT, pkgname) {
+.onLoad <- function(cisDynet, pkgname) {
   logo_info <- c("
 
  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄   ▄         ▄  ▄▄        ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄
@@ -17,6 +17,6 @@
 
   message(logo_info)
   crayon::blue(cat("Author: Tao Zhu\n"))
-  crayon::blue(cat(sprintf("cisDynet: Version %s\n",packageVersion("CAT"))))
+  crayon::blue(cat(sprintf("cisDynet: Version %s\n",packageVersion("cisDynet"))))
   crayon::blue(cat("If you encounter a bug please report : https://github.com/tzhu-bio/cisDynet/issues\n"))
 }
