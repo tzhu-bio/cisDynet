@@ -5,9 +5,14 @@
 <img alt="Documentation" src="https://img.shields.io/badge/Documentation%3F-yes-brightgreen.svg?color=3366CC" target="_blank" /></a>
 <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg?color=DC3912" target="_blank" /> </a>
 <img alt="Published" src="https://img.shields.io/badge/Published%3F-yes-green.svg?color=FF9900" target="_blank" /> </a>
-[![Last-changedate](https://img.shields.io/badge/last%20change-2023--11--07-green.svg)](https://github.com/tzhu-bio/cisDynet/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2023--12--05-green.svg)](https://github.com/tzhu-bio/cisDynet/commits/master)
 
 An integrated platform for modeling gene-regulatory dynamics and networks.
+# News
+**2023-12-05**: To match the valr version 0.7.0.
+
+If you encounter a bug, please install the latest version of cisDynet first.
+
 # cis-regulatory chromatin dynamics and networks (cisDynet)
 
 
