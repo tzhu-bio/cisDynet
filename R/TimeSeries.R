@@ -117,19 +117,20 @@ getTimeRNA <- function(peak_time, peak2gene, rna_matrix, corr_cutoff = 0.4, Pale
   }
 
   # Interpolation for each peak
-  interpolated_expression <- apply(res1, 1, interpolate_expression)
+  interpolated_expression_raw <- as.data.frame(apply(res1, 1, interpolate_expression))
+  interpolated_expression <- interpolated_expression_raw[rowSums(interpolated_expression_raw) > 0,] %>% as.matrix()
   res2 <- t(interpolated_expression)
-  df <- rowZscores(res2,limit = T)
-  column_idx <- which(df[1, ] > 1.9)[1]
-  df1 <- df[,c(column_idx:ncol(df))]
+  df1 <- rowZscores(res2,limit = T)
+  #column_idx <- which(df[1, ] > 0)[1]
+  #df1 <- df[,c(column_idx:ncol(df))]
   if(!is.na(Palette[1])){
     p <- ComplexHeatmap::pheatmap(df1, col = Palette,
-                                  cluster_cols=F,cluster_row=F,show_rownames=F, border_color=NA,
+                                  cluster_cols=F,cluster_row=F,show_rownames=F, border_color=NA,show_colnames = F,
                                   name = "Z-score", top_annotation = ComplexHeatmap::HeatmapAnnotation(Time = 1:ncol(df1),
                                                                                                        show_legend=F))
   } else{
     p <- ComplexHeatmap::pheatmap(df1, col = colorRampPalette(c("#4575B4", "white", "#D73027"))(100),
-                                cluster_cols=F,cluster_row=F,show_rownames=F, border_color=NA,
+                                cluster_cols=F,cluster_row=F,show_rownames=F, border_color=NA, show_colnames = F,
                                 name = "Z-score", top_annotation = ComplexHeatmap::HeatmapAnnotation(Time = 1:ncol(df1), show_legend=F))
   }
   if(return_matrix){
