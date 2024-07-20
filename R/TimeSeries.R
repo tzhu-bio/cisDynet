@@ -203,11 +203,12 @@ plotTimeAll <- function(norm_data, peak2gene, rna_matrix, corr_cutoff = 0.4, lab
   }
     logfile("Calculating RNA time...")
   # Interpolation for each peak
-  interpolated_expression <- apply(rna_mat, 1, interpolate_expression)
+  interpolated_expression_raw <- as.data.frame(apply(rna_mat, 1, interpolate_expression))
+  interpolated_expression <- interpolated_expression_raw[rowSums(interpolated_expression_raw) > 0,] %>% as.matrix()
   res2 <- t(interpolated_expression)
-  df <- rowZscores(res2,limit = T)
-  column_idx <- which(df[1, ] > 1.9)[1]
-  df1 <- df[,c(column_idx:ncol(df))]
+  df1 <- rowZscores(res2,limit = T)
+  #column_idx <- which(df[1, ] > 1.9)[1]
+  #df1 <- df[,c(column_idx:ncol(df))]
   if(!is.na(ATAC_Palette)){
     p1 <- ComplexHeatmap::pheatmap(rowZscores(as.matrix(atac_mat)), col = ATAC_Palette,
                                    cluster_cols=F, cluster_row=F,show_rownames=F, border_color=NA,show_colnames=F,
@@ -275,6 +276,7 @@ plotTimeGene <- function(peak_time, peak2gene, rna_matrix, gene, corr_cutoff = 0
 
     # Interpolation for each peak
     interpolated_expression <- apply(res1, 1, interpolate_expression)
+    #interpolated_expression <- interpolated_expression_raw[rowSums(interpolated_expression_raw) > 0,] %>% as.matrix()
     res2 <- t(interpolated_expression)
     column_idx <- which(res2[1, ] > 0)[1]
     df <- res2[,c(column_idx:ncol(res2))]
