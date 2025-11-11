@@ -40,7 +40,7 @@ plotFootprintScore <- function(score_result, cluster_N = 6, label_motif, limit_Z
     s1 <- colnames(score_result)[2]
     s2 <- colnames(score_result)[3]
     score_result$group <- ifelse(score_result[,2] > score_result[,3], s1, s2)
-    score_result$diff <- abs(score_result[,2] - a[,3])
+    score_result$diff <- abs(score_result[,2] - score_result[,3])  ## score_result$diff <- abs(score_result[,2] - a[,3])
     score_result$label <- ifelse(score_result$diff > quantile(score_result$diff, probs = 0.98), score_result$output_prefix, NA)
     p <- ggscatter(score_result, x = s1, y = s2, color = "group",palette = c("#00AFBB",  "#FC4E07"),size=1, label = "label",repel = TRUE) + geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "red")
     return(p)
@@ -458,3 +458,4 @@ plotFootprintScoreExp <- function(motif2gene, gene_exp, footprint_score, return_
 #   theme_minimal()
 #   ggscatter(wide_matrix, x = "Bulk_B", y = "CD8pos_T")
 # }
+
